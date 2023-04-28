@@ -20,17 +20,20 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Despesas pessoais')),
-      body: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-        Container(
-          width: double.infinity,
-          child: const Card(
-            color: Colors.blue,
-            elevation: 5,
-            child: Text('Gráfico'),
+      body: SingleChildScrollView(
+        child:
+            Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+          Container(
+            width: double.infinity,
+            child: const Card(
+              color: Colors.blue,
+              elevation: 5,
+              child: Text('Gráfico'),
+            ),
           ),
-        ),
-        TransactionUser(),
-      ]),
+          TransactionUser(),
+        ]),
+      ),
     );
   }
 }
